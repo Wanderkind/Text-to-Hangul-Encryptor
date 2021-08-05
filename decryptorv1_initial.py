@@ -152,20 +152,20 @@ for n in range(24):
 lxx = []
 for i in range(int(LC/3)):
     for j in range(24):
-        lxx.append(str((int(K[D(11)][j])*p[1 + (i%23)] + 22*(i**2) + 13*i + 17*j)%10))
+        lxx.append(str((int(K[D(9)][j])*p[1 + (i%23)] + 22*(i**2) + 13*i + 17*j)%10))
 
 G = 8*LC
 for i in range(G):
     for u in range(4):
         lxx[i] = str((int(lxx[i]) + int(lxx[(i + p[20 + u])%int(4*LC/12)]))%10)
-    lxx[i] = lxx[(i - (int(K[D(12)])%24))%G]
+    lxx[i] = lxx[(i - (int(K[D(10)])%24))%G]
 
-X = (int(K[D(13)][8] + K[D(14)][19]) + 5*i)%16
+X = (int(K[D(11)][8] + K[D(12)][19]) + 5*i)%16
 W = str(bin(X)[2:].zfill(4))
 
 cq =[]
 for i in range(int(LC)):
-    cq.append((int(str(lxx[4*i + int(W[0])]) + str(lxx[4*i + int(W[1]) + 1]) + str(lxx[4*i + int(W[2]) + 2]) + str(lxx[4*i + int(W[3]) + 3])) + int(K[D(15)])%((27*i + 7)%(p[i%24]*p[(i+11)%24]) + 3))%24)
+    cq.append((int(str(lxx[4*i + int(W[0])]) + str(lxx[4*i + int(W[1]) + 1]) + str(lxx[4*i + int(W[2]) + 2]) + str(lxx[4*i + int(W[3]) + 3])) + int(K[D(13)])%((27*i + 7)%(p[i%24]*p[(i+11)%24]) + 3))%24)
 
 Rb = []
 for i in range(LC):
@@ -207,11 +207,6 @@ for h in range(24):
         for j in range(LR):
             R[(17*i - j)%LR] = str((int(R[(17*i - j)%LR]) - (e - 2)*int(klkl[i][j%p[i]]))%10)
 
-for h in range(LR):
-    i = LR - 1 - h    
-    R[i] = str((int(R[i]) - int(K[D(10)][i%24]))%10)
-    R[i] = str((int(R[i]) - int(R[(i - int(LR/4) + int(K[D(9)][i%24]) - 3)%LR]))%10)
-
 Ro = R
 for h in range(7):
     j = 6 - h
@@ -232,7 +227,7 @@ for x in range(int(LR/6)):
     for j in range(6):
         Y.append(Rx[6*x + j])
     y = int(''.join(Y))
-    
+
     for u in range(V):
         k = ord(key[u])
         stringkb = str(bin(u**3 + u)[2:].zfill(47))
