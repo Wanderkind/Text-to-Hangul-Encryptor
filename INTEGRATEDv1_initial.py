@@ -1,3 +1,4 @@
+
 print('\nInput key>')
 while True:
     key = str(input())
@@ -107,7 +108,7 @@ def D(m):
 
 p = [5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97,101]
 M = [[0,1,2,3],[0,1,3,2],[0,2,1,3],[0,2,3,1],[0,3,1,2],[0,3,2,1],[1,0,2,3],[1,0,3,2],[1,2,0,3],[1,2,3,0],[1,3,0,2],[1,3,2,0],[2,0,1,3],[2,0,3,1],[2,1,0,3],[2,1,3,0],[2,3,0,1],[2,3,1,0],[3,0,1,2],[3,0,2,1],[3,1,0,2],[3,1,2,0],[3,2,0,1],[3,2,1,0]]
-print('\nEncrypt or Decrypt? Type E or D>')
+print('\nEncrypt or Decrypt? Type E or D> ', end ='')
 while True:
     II = str(input())
     if II == 'E' or II == 'e':
@@ -390,5 +391,5 @@ while True:
         break
     
     else:
-        print('Type E or D>')
+        print('Type E or D> ', end ='')
         continue
