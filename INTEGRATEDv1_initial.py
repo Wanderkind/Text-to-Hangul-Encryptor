@@ -111,7 +111,7 @@ M = [[0,1,2,3],[0,1,3,2],[0,2,1,3],[0,2,3,1],[0,3,1,2],[0,3,2,1],[1,0,2,3],[1,0,
 print('\nEncrypt or Decrypt? Type E or D> ', end ='')
 while True:
     II = str(input())
-    if II == 'E' or II == 'e':
+    if II == 'E' or II == 'e' or II == 'ㄷ':
         
         print('\nInput plaintext>')
         while True:
@@ -243,7 +243,7 @@ while True:
         
         break
     
-    elif II == 'D' or  II == 'd':
+    elif II == 'D' or  II == 'd' or II == 'ㅇ':
         
         print('\nInput Ciphertext>')
         while True:
