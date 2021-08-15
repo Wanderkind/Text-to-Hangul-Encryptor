@@ -234,7 +234,7 @@ while True:
         C = ''.join(ct)
         
         if len(C) != int(3*N/2):
-            print('Error')
+            print('\nError\n')
             exit()
         else:
             print('\nCiphertext:\n')
@@ -375,13 +375,13 @@ while True:
             z = int((902708 - 15394*((8*x)%11) - 9705*(6 - ((5*(x**2))%7)) - 7817*(12 - ((4*x)%13)) - 4211*(((3*(k**2)) + 5*x)%16) + 2981*(((ord(key[x%V]))%100)%5) - 2692*(22 - ((6*(x**2))%23)) + 179*((2*(k**3))%37) - 41*(886 - (x%887)) + 17*(((x**4) - 19*(x**3) + 270*x)%643) + 129*(int(stringkb[(6*x)%47])) + 301*(int(stringko[16 - ((2*x)%17)]) + 2) - y)/(int(stringkb[46 - (x%47)]) + 1))
             
             if z <= 0:
-                print('Error')
+                print('\nError\n')
                 exit()
 
             t.append(chr(z))
         
         if len(t) != int(2*LC/3):
-            print('Error')
+            print('\nError\n')
             exit()
         
         if '𱍊' in t:
