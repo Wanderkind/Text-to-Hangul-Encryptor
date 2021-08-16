@@ -15,27 +15,26 @@ while True:
     else:
         break
 
-d0 = 0
+d = 0
 for u in range(V):
     b = ord(key[u])
-    d0 = d0 + b
-dd = (59*d0)%883
+    d = d + b
+
+dd0 = (59*d)%883
+dd1 = (79*d)%673
+dd2 = (113*d)%727
+dd3 = (163*d)%419
+dd4 = (97*d)%569
 
 kl00 = []
 for t in range(6):
     tv = t + V
     k = ord(key[tv - 6])
     kk = int((k - (k%100))/100)
-    f = (tv**5 + tv**4 + 1012*(tv**3) + 18658*(tv**2) + 3429*tv + 393*(k**2) + 5224*k + kk**2 + 174*kk + 3*(dd**2) + 146**dd + 2995)%10000
+    f = (tv**5 + tv**4 + 1012*(tv**3) + 18658*(tv**2) + 3429*tv + 393*(k**2) + 5224*k + kk**2 + 174*kk + 3*(dd0**2) + 146**dd0 + 2995)%10000
     sk = str(f).zfill(4)
 
     kl00.append(sk)
-
-d1 = 0
-for u in range(V):
-    b = ord(key[u])
-    d1 = d1 + b
-dd1 = (79*d1)%673
 
 kl01 = []
 for t in range(6):
@@ -47,12 +46,6 @@ for t in range(6):
 
     kl01.append(sk)
 
-d2 = 0
-for u in range(V):
-    b = ord(key[u])
-    d2 = d2 + b
-dd2 = (113*d2)%727
-
 kl02 = []
 for t in range(6):
     tv = t + V
@@ -63,12 +56,6 @@ for t in range(6):
 
     kl02.append(sk)
 
-d3 = 0
-for u in range(V):
-    b = ord(key[u])
-    d3 = d3 + b
-dd3 = (163*d3)%419
-
 kl03 = []
 for t in range(6):
     tv = t + V
@@ -78,12 +65,6 @@ for t in range(6):
     sk = str(f).zfill(4)
 
     kl03.append(sk)
-
-d4 = 0
-for u in range(V):
-    b = ord(key[u])
-    d4 = d4 + b
-dd4 = (97*d4)%569
 
 kl04 = []
 for t in range(6):
