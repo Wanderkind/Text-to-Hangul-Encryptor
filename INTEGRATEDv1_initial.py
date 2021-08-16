@@ -15,11 +15,11 @@ while True:
     else:
         break
 
-d = 0
+d0 = 0
 for u in range(V):
     b = ord(key[u])
-    d = d + b
-dd = (59*d)%883
+    d0 = d0 + b
+dd = (59*d0)%883
 
 kl00 = []
 for t in range(6):
@@ -35,7 +35,7 @@ d1 = 0
 for u in range(V):
     b = ord(key[u])
     d1 = d1 + b
-dd1 = (79*d)%673
+dd1 = (79*d1)%673
 
 kl01 = []
 for t in range(6):
@@ -51,7 +51,7 @@ d2 = 0
 for u in range(V):
     b = ord(key[u])
     d2 = d2 + b
-dd2 = (113*d)%727
+dd2 = (113*d2)%727
 
 kl02 = []
 for t in range(6):
@@ -67,7 +67,7 @@ d3 = 0
 for u in range(V):
     b = ord(key[u])
     d3 = d3 + b
-dd3 = (163*d)%419
+dd3 = (163*d3)%419
 
 kl03 = []
 for t in range(6):
@@ -83,7 +83,7 @@ d4 = 0
 for u in range(V):
     b = ord(key[u])
     d4 = d4 + b
-dd4 = (97*d)%569
+dd4 = (97*d4)%569
 
 kl04 = []
 for t in range(6):
