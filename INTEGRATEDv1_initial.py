@@ -97,33 +97,47 @@ while True:
     II = str(input())
     if II == 'E' or II == 'e' or II == 'ㄷ':
         
-        print('\nInput plaintext>')
+        ttext = []
+        print('\nInput plaintext\nEnter "XT" for last line to cease>')
         while True:
-            textb = str(input())
-        
-            Nb = len(textb)
+            while True:
+                textb = str(input())
+                if textb == 'XT':
+                    break
+                else:
+                    ttext.append(textb)
+                    continue
+            
+            textc = '\n'.join(ttext)
+            Nb = len(textc)
             uetl = []
-            for x in range(Nb):
-                l = ord(textb[x])
-                uetl.append(l)
-            MM = max(uetl)
+            if not uetl:
+                MM = 0
+            else:
+                for x in range(Nb):
+                    l = ord(textc[x])
+                    uetl.append(l)
+                MM = max(uetl)
         
             if 10000 < Nb:
+                print('Plaintext length =', Nb)
                 print('Plaintext should not exceed 10000 characters.')
                 print('\nInput plaintext>')
+                ttext = []
                 continue
             elif 196607 < MM:
                 print('Includes invalid character.')
                 print('\nInput plaintext>')
+                ttext = []
                 continue
             else:
                 break
         
         if Nb%2 == 1:
-            text = textb + '𱍊'
+            text = textc + '𱍊'
             N = Nb + 1
         else:
-            text = textb
+            text = textc
             N = Nb
         
         klkl = []
@@ -242,6 +256,7 @@ while True:
             mm = min(uetl)
         
             if LC%3 != 0:
+                print('Ciphertext length =', LC)
                 print('Ciphertext must be 3n characters long.\n')
                 print('Input Ciphertext>')
                 continue
