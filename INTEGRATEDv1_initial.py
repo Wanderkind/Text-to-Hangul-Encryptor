@@ -91,6 +91,22 @@ p = [5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97,101]
 M = [[0,1,2,3],[0,1,3,2],[0,2,1,3],[0,2,3,1],[0,3,1,2],[0,3,2,1],[1,0,2,3],[1,0,3,2],[1,2,0,3],[1,2,3,0],[1,3,0,2],[1,3,2,0],[2,0,1,3],[2,0,3,1],[2,1,0,3],[2,1,3,0],[2,3,0,1],[2,3,1,0],[3,0,1,2],[3,0,2,1],[3,1,0,2],[3,1,2,0],[3,2,0,1],[3,2,1,0]]
 Mr = [[0,1,2,3],[0,1,3,2],[0,2,1,3],[0,3,1,2],[0,2,3,1],[0,3,2,1],[1,0,2,3],[1,0,3,2],[2,0,1,3],[3,0,1,2],[2,0,3,1],[3,0,2,1],[1,2,0,3],[1,3,0,2],[2,1,0,3],[3,1,0,2],[2,3,0,1],[3,2,0,1],[1,2,3,0],[1,3,2,0],[2,1,3,0],[3,1,2,0],[2,3,1,0],[3,2,1,0]]
 
+klkl = []
+for n in range(24):
+        
+    kn = []
+    for t in range(p[n]):
+        tk = t + int(K[D(0)][n])
+        k = ord(key[(p[n] - t - 1)%V])
+        kk = int((k - (k%100))/100)
+        f = (tk**5 + tk**4 + (971 + int(K[D(1)][n]))*(tk**3) + (16947 - int(K[D(2)][n]))*(tk**2) + (2279+int(K[D(3)][n]))*tk + (282 - int(K[D(4)][n]))*(k**2) + (4103+int(K[D(5)][n]))*k + kk**2 + (194-int(K[D(6)][n]))*kk + 3411*n + 841*t*n + 7407*t + 5988)%10000
+        sk = str(f).zfill(4)
+        kln = sk[M[(11*n + n*t + 7*t + 5*int(K[D(7)][n]))%24][int(K[D(8)][n])%4]]
+        kn.append(kln)
+        knl = ''.join(kn)
+
+    klkl.append(knl)
+
 print('\nEncrypt or Decrypt? Type E or D> ', end ='')
 
 while True:
@@ -139,22 +155,6 @@ while True:
         else:
             text = textc
             N = Nb
-        
-        klkl = []
-        for n in range(24):
-        
-            kn = []
-            for t in range(p[n]):
-                tk = t + int(K[D(0)][n])
-                k = ord(key[(p[n] - t - 1)%V])
-                kk = int((k - (k%100))/100)
-                f = (tk**5 + tk**4 + (971 + int(K[D(1)][n]))*(tk**3) + (16947 - int(K[D(2)][n]))*(tk**2) + (2279+int(K[D(3)][n]))*tk + (282 - int(K[D(4)][n]))*(k**2) + (4103+int(K[D(5)][n]))*k + kk**2 + (194-int(K[D(6)][n]))*kk + 3411*n + 841*t*n + 7407*t + 5988)%10000
-                sk = str(f).zfill(4)
-                kln = sk[M[(11*n + n*t + 7*t + 5*int(K[D(7)][n]))%24][int(K[D(8)][n])%4]]
-                kn.append(kln)
-                knl = ''.join(kn)
-        
-            klkl.append(knl)
 
         lxx = []
         for i in range(int(6*N/12)):
@@ -266,22 +266,6 @@ while True:
                 continue
             else:
                 break
-        
-        klkl = []
-        for n in range(24):
-        
-            kn = []
-            for t in range(p[n]):
-                tk = t + int(K[D(0)][n])
-                k = ord(key[(p[n] - t - 1)%V])
-                kk = int((k - (k%100))/100)
-                f = (tk**5 + tk**4 + (971 + int(K[D(1)][n]))*(tk**3) + (16947 - int(K[D(2)][n]))*(tk**2) + (2279+int(K[D(3)][n]))*tk + (282 - int(K[D(4)][n]))*(k**2) + (4103+int(K[D(5)][n]))*k + kk**2 + (194-int(K[D(6)][n]))*kk + 3411*n + 841*t*n + 7407*t + 5988)%10000
-                sk = str(f).zfill(4)
-                kln = sk[M[(11*n + n*t + 7*t + 5*int(K[D(7)][n]))%24][int(K[D(8)][n])%4]]
-                kn.append(kln)
-                knl = ''.join(kn)
-                
-            klkl.append(knl)
         
         lxx = []
         for i in range(int(LC/3)):
