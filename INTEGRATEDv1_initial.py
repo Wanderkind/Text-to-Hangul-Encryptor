@@ -103,9 +103,8 @@ for n in range(24):
         sk = str(f).zfill(4)
         kln = sk[M[(11*n + n*t + 7*t + 5*int(K[D(7)][n]))%24][int(K[D(8)][n])%4]]
         kn.append(kln)
-        knl = ''.join(kn)
 
-    klkl.append(knl)
+    klkl.append(''.join(kn))
 
 print('\nEncrypt or Decrypt? Type E or D> ', end ='')
 
