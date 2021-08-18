@@ -106,7 +106,7 @@ for n in range(24):
 
     klkl.append(''.join(kn))
 
-print('\nEncrypt or Decrypt? Type E or D> ', end ='')
+print('\nEncrypt or Decrypt? Type E or D> ', end = '')
 
 while True:
     II = str(input())
