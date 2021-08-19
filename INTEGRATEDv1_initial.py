@@ -85,7 +85,7 @@ k04 = ''.join(kl04).zfill(24)
 K = [k00, k01, k02, k03, k04]
 
 def D(m):
-    return int(str(str(k00[m]) + str(k01[23 - m])))%5
+    return K[int(str(str(k00[m]) + str(k01[23 - m])))%5]
 
 p = [5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97,101]
 M = [[0,1,2,3],[0,1,3,2],[0,2,1,3],[0,2,3,1],[0,3,1,2],[0,3,2,1],[1,0,2,3],[1,0,3,2],[1,2,0,3],[1,2,3,0],[1,3,0,2],[1,3,2,0],[2,0,1,3],[2,0,3,1],[2,1,0,3],[2,1,3,0],[2,3,0,1],[2,3,1,0],[3,0,1,2],[3,0,2,1],[3,1,0,2],[3,1,2,0],[3,2,0,1],[3,2,1,0]]
@@ -96,12 +96,12 @@ for n in range(24):
         
     kn = []
     for t in range(p[n]):
-        tk = t + int(K[D(0)][n])
+        tk = t + int(D(0)[n])
         k = ord(key[(p[n] - t - 1)%V])
         kk = int((k - (k%100))/100)
-        f = (tk**5 + tk**4 + (971 + int(K[D(1)][n]))*(tk**3) + (16947 - int(K[D(2)][n]))*(tk**2) + (2279+int(K[D(3)][n]))*tk + (282 - int(K[D(4)][n]))*(k**2) + (4103+int(K[D(5)][n]))*k + kk**2 + (194-int(K[D(6)][n]))*kk + 3411*n + 841*t*n + 7407*t + 5988)%10000
+        f = (tk**5 + tk**4 + (971 + int(D(1)[n]))*(tk**3) + (16947 - int(D(2)[n]))*(tk**2) + (2279+int(D(3)[n]))*tk + (282 - int(D(4)[n]))*(k**2) + (4103+int(D(5)[n]))*k + kk**2 + (194-int(D(6)[n]))*kk + 3411*n + 841*t*n + 7407*t + 5988)%10000
         sk = str(f).zfill(4)
-        kln = sk[M[(11*n + n*t + 7*t + 5*int(K[D(7)][n]))%24][int(K[D(8)][n])%4]]
+        kln = sk[M[(11*n + n*t + 7*t + 5*int(D(7)[n]))%24][int(D(8)[n])%4]]
         kn.append(kln)
 
     klkl.append(''.join(kn))
@@ -158,20 +158,20 @@ while True:
         lxx = []
         for i in range(int(6*N/12)):
             for j in range(24):
-                lxx.append(str((int(K[D(9)][j])*p[1 + (i%23)] + 22*(i**2) + 13*i + 17*j)%10))
+                lxx.append(str((int(D(9)[j])*p[1 + (i%23)] + 22*(i**2) + 13*i + 17*j)%10))
         
         G = 2*6*N
         for i in range(G):
             for u in range(4):
                 lxx[i] = str((int(lxx[i]) + int(lxx[(i + p[20 + u])%int(6*N/12)]))%10)
-            lxx[i] = lxx[(i - (int(K[D(10)])%24))%G]
+            lxx[i] = lxx[(i - (int(D(10))%24))%G]
         
-        X = (int(K[D(11)][8] + K[D(12)][19]) + 5*i)%16
+        X = (int(D(11)[8] + D(12)[19]) + 5*i)%16
         W = str(bin(X)[2:]).zfill(4)
         
         cq =[]
         for i in range(int(6*N/4)):
-            cq.append((int(str(lxx[4*i + int(W[0])]) + str(lxx[4*i + int(W[1]) + 1]) + str(lxx[4*i + int(W[2]) + 2]) + str(lxx[4*i + int(W[3]) + 3])) + int(K[D(13)])%((27*i + 7)%(p[i%24]*p[(i+11)%24]) + 3))%24)
+            cq.append((int(str(lxx[4*i + int(W[0])]) + str(lxx[4*i + int(W[1]) + 1]) + str(lxx[4*i + int(W[2]) + 2]) + str(lxx[4*i + int(W[3]) + 3])) + int(D(13))%((27*i + 7)%(p[i%24]*p[(i+11)%24]) + 3))%24)
         
         a1 = []
         for x in range(N):
@@ -217,7 +217,7 @@ while True:
                 r4.append(R[4*i + M[cq[i]][w]])
                 
             irs = int(''.join(r4))
-            g = int(K[D((2*i)%24)] + K[D((2*i + 1)%24)])%11172
+            g = int(D((2*i)%24) + D((2*i + 1)%24))%11172
             
             if g < 10000:
                 if irs < g:
@@ -270,26 +270,26 @@ while True:
         lxx = []
         for i in range(int(LC/3)):
             for j in range(24):
-                lxx.append(str((int(K[D(9)][j])*p[1 + (i%23)] + 22*(i**2) + 13*i + 17*j)%10))
+                lxx.append(str((int(D(9)[j])*p[1 + (i%23)] + 22*(i**2) + 13*i + 17*j)%10))
 
         G = 8*LC
         for i in range(G):
             for u in range(4):
                 lxx[i] = str((int(lxx[i]) + int(lxx[(i + p[20 + u])%int(4*LC/12)]))%10)
-            lxx[i] = lxx[(i - (int(K[D(10)])%24))%G]
+            lxx[i] = lxx[(i - (int(D(10))%24))%G]
         
-        X = (int(K[D(11)][8] + K[D(12)][19]) + 5*i)%16
+        X = (int(D(11)[8] + D(12)[19]) + 5*i)%16
         W = str(bin(X)[2:].zfill(4))
         
         cq =[]
         for i in range(int(LC)):
-            cq.append((int(str(lxx[4*i + int(W[0])]) + str(lxx[4*i + int(W[1]) + 1]) + str(lxx[4*i + int(W[2]) + 2]) + str(lxx[4*i + int(W[3]) + 3])) + int(K[D(13)])%((27*i + 7)%(p[i%24]*p[(i+11)%24]) + 3))%24)
+            cq.append((int(str(lxx[4*i + int(W[0])]) + str(lxx[4*i + int(W[1]) + 1]) + str(lxx[4*i + int(W[2]) + 2]) + str(lxx[4*i + int(W[3]) + 3])) + int(D(13))%((27*i + 7)%(p[i%24]*p[(i+11)%24]) + 3))%24)
         
         Rb = []
         for i in range(LC):
             
             o = ord(C[i])
-            g = int(K[D((2*i)%24)] + K[D((2*i + 1)%24)])%11172
+            g = int(D((2*i)%24) + D((2*i + 1)%24))%11172
             
             if g < 10000:
                 if o - g < 44032:
@@ -350,7 +350,7 @@ while True:
                 k = ord(key[u])
                 stringkb = str(bin(k**3 + 2*k)[2:].zfill(47))
                 stringko = str(oct(k**3 + 2*k)[2:].zfill(17))
-            
+
             kv = ord(key[x%V])            
             z = int((902708 - 15394*((8*x)%11) - 9705*(6 - ((5*(x**2))%7)) - 7817*(12 - ((4*x)%13)) - 4211*(((3*(kv**2)) + 5*x)%16) + 2981*((kv%100)%5) - 2692*(22 - ((6*(x**2))%23)) + 179*((2*(kv**3))%37) - 41*(886 - (x%887)) + 17*(((x**4) - 19*(x**3) + 270*x)%643) + 129*(int(stringkb[(6*x)%47])) + 301*(int(stringko[16 - ((2*x)%17)]) + 2) - y)/(int(stringkb[46 - (x%47)]) + 1))
             
