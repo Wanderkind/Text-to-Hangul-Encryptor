@@ -239,14 +239,14 @@ while True:
             print('Key length =', V)
             print('Ciphertext length =', len(C), '\n')
         
-        print('Save .txt file? Type Y to save> ', end = '')
+        print('Save as .txt file? Type Y to save> ', end = '')
         while True:
             ST = str(input())
             if ST == 'Y' or ST == 'y' or ST == 'ㅛ':
                 print('Enter file name> ', end = '')
                 name = str(input())
                 import os.path
-                print('Save to current directory or manual? Type C or M> ', end = '')
+                print('Save to current directory or manual input? Type C or M> ', end = '')
                 while True:
                     DS = str(input())
                     if DS == 'C' or DS == 'c' or DS == 'ㅊ':
@@ -402,14 +402,14 @@ while True:
         print('Key length =', V)
         print('Plaintext length =', len(P), '\n')
         
-        print('Save .txt file? Type Y to save> ', end = '')
+        print('Save as .txt file? Type Y to save> ', end = '')
         while True:
             ST = str(input())
             if ST == 'Y' or ST == 'y' or ST == 'ㅛ':
                 print('Enter file name> ', end = '')
                 name = str(input())
                 import os.path
-                print('Save to current directory or manual? Type C or M> ', end = '')
+                print('Save to current directory or manual input? Type C or M> ', end = '')
                 while True:
                     DS = str(input())
                     if DS == 'C' or DS == 'c' or DS == 'ㅊ':
