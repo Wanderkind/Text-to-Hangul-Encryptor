@@ -259,7 +259,7 @@ while True:
                     else:
                         print('Type C or M> ', end = '')
                         continue
-                CN = os.path.join(path, name +".txt")
+                CN = os.path.join(path, name + ".txt")
                 file1 = open(CN, "w")
                 file1.write(C)
                 file1.close()
@@ -422,7 +422,7 @@ while True:
                     else:
                         print('Type C or M> ', end = '')
                         continue
-                CN = os.path.join(path, name +".txt")
+                CN = os.path.join(path, name + ".txt")
                 file1 = open(CN, "w")
                 file1.write(P)
                 file1.close()
