@@ -107,10 +107,10 @@ for n in range(24):
     kn = []
     for t in range(p[n]):
         tk = t + int(D(0)[n])
-        k = ord(key[(p[n] - t - 1)%V])
-        kk = int((k - (k%100))/100)
-        f = (tk**5 + tk**4 + (971 + int(D(1)[n]))*(tk**3) + (16947 - int(D(2)[n]))*(tk**2) + (2279+int(D(3)[n]))*tk + (282 - int(D(4)[n]))*(k**2) + (4103+int(D(5)[n]))*k + kk**2 + (194-int(D(6)[n]))*kk + 3411*n + 841*t*n + 7407*t + 5988)%10000
-        sk = str(f).zfill(4)
+        k2 = ord(key[(p[n] - t - 1)%V])
+        kk2 = int((k2 - (k2%100))/100)
+        f2 = (tk**5 + tk**4 + (971 + int(D(1)[n]))*(tk**3) + (16947 - int(D(2)[n]))*(tk**2) + (2279+int(D(3)[n]))*tk + (282 - int(D(4)[n]))*(k2**2) + (4103+int(D(5)[n]))*k2 + kk2**2 + (194-int(D(6)[n]))*kk2 + 3411*n + 841*t*n + 7407*t + 5988)%10000
+        sk = str(f2).zfill(4)
         kln = sk[M[(11*n + n*t + 7*t + 5*int(D(7)[n]))%24][int(D(8)[n])%4]]
         kn.append(kln)
 
@@ -188,9 +188,9 @@ while True:
             z = ord(text[x])
             
             for u in range(V):
-                k = ord(key[u])
-                stringkb = str(bin(k**3 + 2*k)[2:].zfill(47))
-                stringko = str(oct(k**3 + 2*k)[2:].zfill(17))
+                k3 = ord(key[u])
+                stringkb = str(bin(k3**3 + 2*k3)[2:].zfill(47))
+                stringko = str(oct(k3**3 + 2*k3)[2:].zfill(17))
 
             kv = ord(key[x%V])
             y = 902708 - 15394*((8*x)%11) - 9705*(6 - ((5*(x**2))%7)) - 7817*(12 - ((4*x)%13)) - 4211*(((3*(kv**2)) + 5*x)%16) + 2981*((kv%100)%5) - 2692*(22 - ((6*(x**2))%23)) + 179*((2*(kv**3))%37) - 41*(886 - (x%887)) + 17*(((x**4) - 19*(x**3) + 270*x)%643) - (int(stringkb[46 - (x%47)]) + 1)*z + 129*(int(stringkb[(6*x)%47])) + 301*(int(stringko[16 - ((2*x)%17)]) + 2)
@@ -385,9 +385,9 @@ while True:
             y = int(''.join(Y))
         
             for u in range(V):
-                k = ord(key[u])
-                stringkb = str(bin(k**3 + 2*k)[2:].zfill(47))
-                stringko = str(oct(k**3 + 2*k)[2:].zfill(17))
+                k3 = ord(key[u])
+                stringkb = str(bin(k3**3 + 2*k3)[2:].zfill(47))
+                stringko = str(oct(k3**3 + 2*k3)[2:].zfill(17))
 
             kv = ord(key[x%V])            
             z = int((902708 - 15394*((8*x)%11) - 9705*(6 - ((5*(x**2))%7)) - 7817*(12 - ((4*x)%13)) - 4211*(((3*(kv**2)) + 5*x)%16) + 2981*((kv%100)%5) - 2692*(22 - ((6*(x**2))%23)) + 179*((2*(kv**3))%37) - 41*(886 - (x%887)) + 17*(((x**4) - 19*(x**3) + 270*x)%643) + 129*(int(stringkb[(6*x)%47])) + 301*(int(stringko[16 - ((2*x)%17)]) + 2) - y)/(int(stringkb[46 - (x%47)]) + 1))
