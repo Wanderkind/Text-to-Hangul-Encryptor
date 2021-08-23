@@ -257,7 +257,7 @@ while True:
                         path = str(input())
                         break
                     else:
-                        print('Type C or M> ', end ='')
+                        print('Type C or M> ', end = '')
                         continue
                 CN = os.path.join(path, name +".txt")
                 file1 = open(CN, "w")
@@ -420,7 +420,7 @@ while True:
                         path = str(input())
                         break
                     else:
-                        print('Type C or M> ', end ='')
+                        print('Type C or M> ', end = '')
                         continue
                 CN = os.path.join(path, name +".txt")
                 file1 = open(CN, "w")
@@ -433,5 +433,5 @@ while True:
         break
     
     else:
-        print('Type E or D> ', end ='')
+        print('Type E or D> ', end = '')
         continue
