@@ -110,8 +110,8 @@ for n in range(24):
         k2 = ord(key[(p[n] - t - 1)%V])
         kk2 = int((k2 - (k2%100))/100)
         f2 = (tk**5 + tk**4 + (971 + int(D(1)[n]))*(tk**3) + (16947 - int(D(2)[n]))*(tk**2) + (2279+int(D(3)[n]))*tk + (282 - int(D(4)[n]))*(k2**2) + (4103+int(D(5)[n]))*k2 + kk2**2 + (194-int(D(6)[n]))*kk2 + 3411*n + 841*t*n + 7407*t + 5988)%10000
-        sk = str(f2).zfill(4)
-        kln = sk[M[(11*n + n*t + 7*t + 5*int(D(7)[n]))%24][int(D(8)[n])%4]]
+        sk2 = str(f2).zfill(4)
+        kln = sk2[M[(11*n + n*t + 7*t + 5*int(D(7)[n]))%24][int(D(8)[n])%4]]
         kn.append(kln)
 
     klkl.append(''.join(kn))
