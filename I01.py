@@ -220,7 +220,7 @@ while True:
         Rx = list(r1)
         R = []
         for i in range(6*N):
-            R.append(Rx[(i + int(klkl[i%11]))%(6*N)])
+            R.append(Rx[(i + int(klkl[0]))%(6*N)])
         
         Ro = R
         for j in range(7):
@@ -392,7 +392,7 @@ while True:
         
         Rx = []
         for i in range(LR):
-            Rx.append(R[(i - int(klkl[i%11]))%LR])
+            Rx.append(R[(i - int(klkl[0]))%LR])
         
         t = []
         for x in range(int(LR/6)):
