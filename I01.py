@@ -335,9 +335,6 @@ while True:
                 lxx[i] = str((int(lxx[i]) + int(lxx[(i + p[20 + u])%int(4*LC/12)]))%10)
             lxx[i] = lxx[(i - (int(D(10))%24))%G]
         
-        X = (int(D(11)[8] + D(12)[19]) + 5*i)%16
-        W = str(bin(X)[2:].zfill(4))
-        
         cq =[]
         for i in range(int(LC)):
             X = (int(D(11)[8] + D(12)[19]) + 5*i)%16
