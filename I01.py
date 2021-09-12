@@ -340,6 +340,8 @@ while True:
         
         cq =[]
         for i in range(int(LC)):
+            X = (int(D(11)[8] + D(12)[19]) + 5*i)%16
+            W = str(bin(X)[2:].zfill(4))
             cq.append((int(str(lxx[4*i + int(W[0])]) + str(lxx[4*i + int(W[1]) + 1]) + str(lxx[4*i + int(W[2]) + 2]) + str(lxx[4*i + int(W[3]) + 3])) + int(D(13))%((27*i + 7)%(p[i%24]*p[(i+11)%24]) + 3))%24)
         
         Rb = []
