@@ -194,7 +194,7 @@ while True:
         for i in range(G):
             for u in range(4):
                 lxx[i] = str((int(lxx[i]) + int(lxx[(i + p[20 + u])%int(6*N/12)]))%10)
-            lxx[i] = lxx[(i - (int(D(10))%24))%G]
+                lxx[i] = str((int(lxx[(11527*(i - (int(D(10))%24)) + int(14029/(u + 1)))%G]) + ((i**2 + 12*i)*(u + 3)))%10)
         
         cq =[]
         for i in range(int(6*N/4)):
@@ -333,7 +333,7 @@ while True:
         for i in range(G):
             for u in range(4):
                 lxx[i] = str((int(lxx[i]) + int(lxx[(i + p[20 + u])%int(4*LC/12)]))%10)
-            lxx[i] = lxx[(i - (int(D(10))%24))%G]
+                lxx[i] = str((int(lxx[(11527*(i - (int(D(10))%24)) + int(14029/(u + 1)))%G]) + ((i**2 + 12*i)*(u + 3)))%10)
         
         cq =[]
         for i in range(int(LC)):
