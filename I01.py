@@ -302,7 +302,7 @@ while True:
         
         print('\nInput Ciphertext>')
         while True:
-            C = str(input())
+            C = str(input()).replace(' ','')
         
             LC = len(C)
             uetl = []
